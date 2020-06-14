@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Hangman</h1>
+    <p>Find the missing word- Enter a letter</p>
+    <div class="game-container">
+        <svg height="250px" width="200px" class="figure-container">
+            <line x1="60" y1="20" x2="140" y2="20" />
+            <line x1="140" y1="20" x2="140" y2="50" />
+            <line x1="60" y1="20" x2="60" y2="230" />
+            <line x1="20" y1="230" x2="100" y2="230" />
+           <!--HEAD-->
+            <circle cx="140" cy="70" r="20" class="figure-part" />
+            <!--NECK-->
+            <line x1="140" y1="90" x2="140" y2="150" class="figure-part" />
+            <!--HANDS-->
+            <line x1="140" y1="120" x2="120" y2="100" class="figure-part"/>
+            <line x1="140" y1="120" x2="160" y2="100" class="figure-part" />
+           <!--LEGS-->
+            <line x1="140" y1="150" x2="120" y2="180" class="figure-part"/>
+            <line x1="140" y1="150" x2="160" y2="180" class="figure-part"/>
+        </svg>
+        <div class="wrong-letter-container">
+            <div class="wrong-letter"></div>
+        </div>
+
+        <div class="word" id="word"></div>
+    </div>
+        <div class="popup-container">
+            <div class="popup">
+            <h2 class="finalMessage">You Have Won</h2>
+            <button class="play-button">Play Again</button>
+        </div>
+        </div>
+        <div class="notification-container">
+            <h4>You have entered the same letter</h4>
+        </div>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>
